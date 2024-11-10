@@ -1,15 +1,615 @@
 body{
-    background-image: url("images\bgimage.png");
+    font-family: "Quicksand", sans-serif;
+    background-image: linear-gradient(to right,#000000,#12108b);
+    color: whitesmoke;
+    margin: 0;
+    overflow: visible;
+   
+}
+
+body::-webkit-scrollbar {
+    display: none;
+  }
+
+.main{
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
 }
 
 .navbar{
-    width: 100%;
-    height:90px;
-    background-color: #6388ff9d;
-    opacity: 0.5;
+    display: flex;
+    height: 4rem;
+    flex-direction: row;
+    color: white;
+    gap: 5rem;
+    /* background-color: #12108b61; */
+    /* position: sticky; */
+    z-index: 1000;
+    
 }
 
-.navbar img{
-    height: 80px;
-    width: 80px;
+.logo{
+    
+    width: 5rem;
+    margin-left: 1rem;
+    
+
+    
 }
+
+.logo img{
+    align-self: center;
+    
+}
+.links{
+    /* background-color: cadetblue; */
+    display: flex;
+    flex: 1;
+    margin-right: 1rem; 
+    gap: 3rem;
+    align-items: center;
+    justify-content: center;
+    
+
+}
+
+.links a{
+    color: aliceblue;
+    text-decoration: none;
+
+}
+
+.subbtn{
+    justify-content: center;
+    align-items: center;
+    margin-right: 2rem;
+
+}
+
+.subbtn button{
+    height: 2rem;
+    width: 5rem;
+    align-self: center;
+    border-radius: 25px;
+    margin-top: 0.5rem;
+
+    transition: background-color 0.5s ease,box-shadow 0.5s ease;
+   
+}
+
+
+
+.content{
+    
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+
+    
+}
+.one{
+   
+
+    height:7rem;
+}
+.two{
+    
+    display: flex;
+    flex-direction:row;
+    flex: 1;
+    gap: 5rem;
+
+    
+}
+
+.para{
+  /* background-color: cornflowerblue; */
+  height: 1rem;
+  width: 25rem;
+  /* align-self: center; */
+  margin-left: 3rem;
+  margin-top: 0rem;
+}
+.design{
+    
+    height: 25rem;
+    width: 40rem;
+    justify-self: flex-end;
+    flex: 1;
+    background-image:url("assets/3dimg.png");
+    background-size: cover;
+}
+
+
+.navbar .logo img{
+    height: 1rem;
+    width: 2.5rem;
+}
+
+.wel{
+    
+    height: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+.container{
+    
+    height: 4rem;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    
+    align-items: center;
+    
+    color: white;
+}
+
+/* .design img{
+    height: 200px;
+    width: 200px;
+} */
+
+.para .gif img{
+    height: 12rem;
+    width: 12rem;
+    
+}
+.para button{
+    height: 3rem;
+    width: 10rem;
+    border-radius: 25px;
+    font-size: 20px;
+    /* box-shadow: 2px 2px 2px white; */
+    transition: background-color 0.5s ease,box-shadow 0.5s ease;
+    margin-top: 5rem;
+}
+
+#mainimg{
+    height: 150px;
+    width: 150px;
+    position: absolute;
+    left: 1rem;
+    top: 3rem;
+    
+
+}
+
+
+.circle {
+    position: absolute;
+    width: 20px;                  
+    height: 20px;
+    border-radius: 50%;
+    background: #adacff; 
+    box-shadow: 0px 0px 10px rgb(255, 253, 253); 
+    backdrop-filter: blur(50px); /* Apply blur */
+    border: 1px solid rgba(255, 255, 255, 0.3); /* Soft white border for contrast */
+    pointer-events: none; /* Ensure it doesn’t interfere with clicks */
+    transition: transform 0.2s ease; /* Smooth transform for better effect */
+  }
+
+  .about{
+    /* background-image: url("assets/aboutus.png");
+    background-size: cover; */
+
+    background-image: linear-gradient(to right,#000000,#12108b);
+     height: 100vh; 
+    width: 100%; 
+    display: flex;
+    flex-direction: column;
+  }
+
+  .hd{
+    /* background-color: blueviolet; */
+    height: 15rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    
+  }
+
+  .hd h2{
+    margin-top: 2rem;
+  }
+
+  .hd p{
+    margin-top: 2rem;
+  }
+
+  
+  .domains{
+    /* background-color: antiquewhite; */
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+
+ 
+
+  .domains .card{
+    display: flex;
+    flex-direction: column;
+    
+    height: 20rem;
+    width: 20rem;
+    gap: 1rem;
+  }
+
+  .domains .card .photo{
+    background-color: blueviolet;
+    height: 15rem;
+    width: 100%;
+    opacity: 0.5;
+    transition: opacity 0.5s ease,box-shadow 0.5s ease,border-radius 0.5s ease;
+    
+  }
+
+  .domains .card .name
+  {
+    height: 4rem;
+    width: 100%;
+    background-color: rgba(24, 11, 171, 0.45);
+    
+  }
+
+  .domains #ai .photo{
+    background-image: url("assets/ai.jpg");
+    background-size: cover;
+    
+  }
+
+  .domains #ml .photo{
+    background-image: url("assets/ml.jpg");
+    background-size: cover;
+  }
+
+  .domains #iot .photo{
+    background-image: url("assets/iot.jpg");
+    background-size: cover;
+  }
+
+  .domains #mr .photo{
+    background-image: url("assets/mr.jpg");
+    background-size: cover;
+  }
+
+  .domains .card .name{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    transition: background-color 1s ease,color 0.5s ease,box-shadow 0.5s ease,border-radius 0.5s ease;
+  }
+
+  .events {
+    /* /* background-image: url("assets/aboutus.png");
+    background-size: cover; */
+   
+   height: 100vh;
+   width: 100%;
+
+  }
+
+  .events .outer{
+   
+    height: 7rem;
+    width: 100%;
+
+
+  }
+
+  .events .inner{
+
+    flex: 1;
+    /* height: 100vh;
+    width: 80%; */
+    margin-left: 0rem;
+    
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+
+
+
+  }
+
+  .events .outer h2{
+    margin-left: 2rem;
+    margin-right: 2rem;
+  }
+
+  .events .outer p{
+    margin-left: 2rem;
+    margin-right: 2rem;
+  }
+
+  .events .inner .event{
+    
+    height: 16rem;
+    width: 40%;
+    opacity: 0.5;
+    transition: opacity 0.5s ease,box-shadow 0.5s ease,border-radius 0.5s ease;
+    
+  }
+
+  .events .inner #one{
+    background-image: url(assets/sparkx.jpg);
+    background-size: cover;
+  }
+
+  .events .inner #two{
+    background-image: url(assets/machie.png);
+    background-size: cover;
+  }
+
+  .events .inner #three{
+    background-image: url(assets/techConnect.jpg);
+    background-size: cover;
+  }
+
+  .events .inner #four{
+    background-image: url(assets/train.png);
+    background-size: cover;
+  }
+
+  .team{
+    /* background-color: cadetblue; */
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .team .outer{
+    /* background-color: blueviolet; */
+    width: 80%;
+    height: 20rem;
+    display: flex;
+    flex-direction: row;
+    /* gap: 2rem; */
+    
+  }
+
+  .team .outer .mainpic{
+    background-image: url("assets/srikanthanna.jpg");
+    background-size: cover;
+  }
+
+
+  .team .inner{
+    /* background-color: brown; */
+
+    width: 100%;
+    height: 100vh;
+
+    display: flex;
+
+    flex-direction:row;
+    gap: 2rem;
+    flex-wrap: wrap;
+    
+    align-items: center;
+    justify-content: space-around;
+    
+  }
+
+  .team h2{
+    display:inline;
+    justify-self: flex-start;
+    align-self: flex-start;
+    margin-left: 2rem;
+  }
+
+  
+
+  .team .outer .mainpic{
+    background-color: rgb(25, 81, 83);
+    width: 10rem;
+  }
+
+  .team .outer .desc{
+    /* background-color: chocolate; */
+    flex: 1;
+    margin-left: 1.5rem;
+  }
+
+  .team .outer .desc h3{
+    display: inline;
+  }
+
+  .team .inner .lyt{
+    background-color: #12108b;
+    height: 10rem;
+    width: 15rem;
+    display: flex;
+  }
+
+  .team .inner .lyt .pic{
+    background-color: rgba(250, 250, 250, 0.2);
+    height: 80%;
+    width: 100%;
+  }
+
+  .team2{
+    /* background-color: bisque; */
+    height: 100vh;
+    width: 100%;
+    
+  }
+
+.team2 .out{
+  /* background-color: brown; */
+  height: 28rem;
+  width: 100%;
+  display: flex;
+
+  flex-direction:row;
+  gap: 2rem;
+  flex-wrap: wrap;
+  
+  align-items: center;
+  justify-content: space-around;
+
+}
+
+.team2 .out .lyt{
+  background-color: #12108b;
+    height: 10rem;
+    width: 15rem;
+    display: flex;
+}
+
+.team2 .out .lyt .pic{
+  background-color: rgba(250, 250, 250, 0.2);
+    height: 80%;
+    width: 100%;
+}
+
+.team2 .inn{
+  background-color: #12108b27;
+  height: 14rem;
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+ 
+  
+}
+
+.team2 .inn img{
+  height: 1rem;
+  width: 1rem;
+}
+
+.team2 .inn  a{
+  text-decoration: none;
+  color: white;
+}
+
+.team2 .inn .socials{
+  /* background-color: aliceblue; */
+  flex: 1;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+ 
+}
+
+.team2 .inn{
+  margin-top: 10rem;
+}
+
+.team2 .inn .socials .soc{
+  opacity: 0.5;
+  transition: opacity 0.5s ease;
+}
+.about .hd img{
+  height: 5rem;
+  width: 5rem;
+  display: inline;
+  margin-top: 2rem;
+  background-color: whitesmoke;
+  margin-right: 3rem;
+  border-radius: 10px;
+}
+
+.hd .new{
+  display: flex;
+}
+
+
+
+
+
+/*-----------------------------------------------------------------------------hover changes------------------------------------- */
+
+
+
+.navbar .links a{
+  opacity: 0.5;
+  transition: opacity 0.5s ease,text-decoration 1s ease;
+}
+.navbar .links a:hover{
+  opacity: 1;
+  text-decoration: underline;
+}
+
+.navbar .subbtn button:hover{
+  background-color: #adacff;
+  color: white;
+  box-shadow: 0px 2px 10px white;
+}
+
+.para button:hover{
+  background-color: #adacff;
+  color: white;
+  box-shadow: 2px 2px 15px white;
+}
+
+.domains .card .name:hover{
+  background-color: aliceblue;
+  color: #12108b;
+  box-shadow: 3px 3px 20px white;
+  border-radius: 25px;
+}
+
+.events .inner .event:hover{
+  opacity: 1;
+  box-shadow: 3px 3px 20px white;
+  border-radius: 25px;
+}
+.domains .card .photo:hover{
+  opacity: 1;
+  box-shadow: 3px 3px 10px white;
+  border-radius: 25px;
+}
+
+.team2 .inn .socials .soc:hover{
+  opacity: 1;
+  
+}
+
+/* Example: Make a div wider on larger screens */
+@media (min-width: 768px) {
+  .my-div {
+    width: 50%;
+  }
+}
+
+/* Example: Hide an element on smaller screens */
+@media (max-width: 600px) {
+  .hide-on-small {
+    display: none;
+  }
+}
+
+
+  
+
+
+
+  
+
+
+ 
+
+
+
+
+
+    
+
